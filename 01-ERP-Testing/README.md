@@ -1,101 +1,39 @@
-# ERP Testing - Odoo Systems
+# ERP Testing - Odoo System
 
 ## 📌 Overview
-This section contains manual testing activities for ERP systems built on Odoo.
+This section contains manual testing activities performed on ERP system modules.
 
 ---
 
 ## 🧩 Modules Tested
 
-- Warehouse Management
-- Purchase Orders
-- Purchase Returns
-- Suppliers
 - Inventory Management
+- Purchase Orders
+- CRM Module
+- Suppliers Management
 - Transfer Requests
-- CRM Operations
 
 ---
 
-## 🧪 Testing Types
+## 🧪 Testing Activities
 
-- Functional Testing
-- Regression Testing
-- Smoke Testing
-- UAT
-- Business Logic Validation
-- Negative Testing
-
----
-
-## 📋 Sample Test Scenario
-
-### Purchase Order Creation
-
-**Steps:**
-1. Open Purchase Orders module
-2. Click Create
-3. Select Supplier
-4. Add Products
-5. Save
-
-**Expected Result:**
-Purchase Order should be created successfully and appear in list view.
+- Requirement analysis
+- Writing and executing test cases
+- Functional testing
+- Regression testing
+- Business workflow validation
+- Defect identification and reporting
 
 ---
 
-## 🎯 Key Experience
+## 🧠 Key Skills Demonstrated
 
-- Validating ERP business workflows
-- Testing financial & inventory logic
-- Ensuring data consistency across modules
-
----
-
-## 📌 Impact
-
-Ensured business workflow accuracy across ERP modules and validated critical financial and inventory operations.
-
-## 🏢 Real Project: Microsoft & Sprints Testing Cycle
-
-### 📌 Overview
-This project was based on real business requirements provided by Microsoft & Sprints simulation.
-
-It included full QA lifecycle from requirements analysis to defect reporting and tracking using Jira.
+- ERP system understanding (Odoo)
+- Business process validation
+- Manual test case design
+- End-to-end workflow testing
 
 ---
 
-### 🧩 Activities Performed
-
-- Requirement analysis and understanding feature scope
-- Writing detailed test cases based on requirements
-- Functional testing of specific features
-- Logging defects in structured format
-- Performing regression testing after fixes
-- Tracking issues using Jira workflow
-
----
-
-### 🐞 Bug Reporting
-
-Defects were identified and documented with:
-- Clear reproduction steps
-- Expected vs actual results
-- Priority & severity classification
-
----
-
-### 🔁 Jira Workflow Simulation
-
-- Created tasks in Jira
-- Moved tickets across workflow:
-  Open → In Progress → Retest → Done
-
----
-
-### 🎯 Outcome
-
-This project demonstrates real-world QA experience in:
-- Requirement-based testing
-- Agile workflow environment
-- Defect lifecycle management
+## 🎯 Outcome
+This section demonstrates hands-on experience in testing real ERP business workflows and validating system behavior against requirements.
