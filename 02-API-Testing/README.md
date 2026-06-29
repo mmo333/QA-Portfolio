@@ -1,7 +1,7 @@
 # API Testing - Postman
 
 ## 📌 Overview
-This section demonstrates hands-on API testing using Postman on real backend services.
+This section contains API testing activities performed using Postman on real backend services.
 
 ---
 
@@ -13,8 +13,8 @@ This section demonstrates hands-on API testing using Postman on real backend ser
 - OTP Verification API
 
 ### Core Business APIs
-- Services Management
-- Provider Management
+- Services Management APIs
+- Provider Management APIs
 - Location APIs
 
 ---
@@ -25,28 +25,23 @@ This section demonstrates hands-on API testing using Postman on real backend ser
 - Response Body Validation
 - Schema Validation
 - Negative Testing
-- Authorization Testing
-- Token Validation
 - Input Validation Testing
+- Authorization & Token Validation
 
 ---
 
 ## 🛠 Tool Used
-Postman
+- Postman
 
 ---
 
 ## 📸 Evidence
-This section represents API testing execution including:
+This section includes API execution proof such as:
 - Request/Response validation
-- Postman collection execution
-- API behavior verification
+- API response screenshots
+- Collection execution results
 
 ---
 
 ## 🎯 Outcome
-Demonstrates ability to:
-- Validate backend APIs
-- Detect incorrect responses
-- Ensure business logic correctness
-- Work with real-world API workflows
+Demonstrates hands-on experience in testing backend APIs, validating business logic, and ensuring correct system behavior.
