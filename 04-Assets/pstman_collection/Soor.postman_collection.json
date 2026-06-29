@@ -1,0 +1,2024 @@
+{
+	"info": {
+		"_postman_id": "0f77809a-dd85-4d87-9237-88afc7ee7271",
+		"name": "Soor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50675796",
+		"_collection_link": "https://www.postman.com/ks0894976-372337/workspace/soor/collection/50675796-0f77809a-dd85-4d87-9237-88afc7ee7271?action=share&source=collection_link&creator=50675796"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonResponse = pm.response.json();\r",
+									"pm.collectionVariables.set('token', jsonResponse.data.access_token);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "karim",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "karim12@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01019206606",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "terms_accepted",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "user_type",
+									"value": "bodyguard",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url_online}}/auth/register",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "mido",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "mido@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "01021783851",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "12345678",
+											"type": "text"
+										},
+										{
+											"key": "terms_accepted",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/v1/auth/register",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Nov 2025 09:51:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01KBA2S65T5XV5FAERPTY8CV5N"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"ms_lang.Registered successfully\",\n    \"data\": {\n        \"user\": {\n            \"user_id\": 14,\n            \"user_name\": \"mido\",\n            \"user_email\": \"mido@gmail.com\",\n            \"user_phone\": \"01021783851\",\n            \"user_lang\": \"ar\",\n            \"user_status\": \"pending\",\n            \"user_active\": false,\n            \"user_img\": \"http://127.0.0.1:8080/uploads/avatar.png\",\n            \"user_type\": \"user\",\n            \"user_role_id\": 2,\n            \"phone_verified\": false,\n            \"phone_verified_at\": null\n        },\n        \"token\": \"{{vault:json-web-token}}EOQ3O8Snu5N7erI98If6cIannTbkFUKS436udZ4jpVDkfRLp1Q1q8eQHFg1eR_p61JB4ctOVDdLzv81UFWDDuDOGwMzKEK-FnIAO5xVZ3Eq5X8P-j9ZdG2mK0O4iotOCgCNUFprMhFBKfXWCCBezB3rwV0Hyz3D1dwTGxGOoDdyj0m_U\",\n        \"token_type\": \"Bearer\",\n        \"verification_code\": 6843\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "verify-code",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "01019206606",
+									"type": "text"
+								},
+								{
+									"key": "verification_code",
+									"value": "72991",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url_online}}/auth/verify-code",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"auth",
+								"verify-code"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "01021783851",
+											"type": "text"
+										},
+										{
+											"key": "verification_code",
+											"value": "68432",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}/auth/verify-code",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"auth",
+										"verify-code"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Nov 2025 10:32:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01KBA549943P0JA6XMZ7ASYB9D"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"message\": \"رمز تحقق غير صالح أو منتهي الصلاحية\",\n    \"data\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "resend-verification-code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "01019206607",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url_online}}/auth/resend-verification-code",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"auth",
+								"resend-verification-code"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "01021783851",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}/auth/resend-verification-code",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"auth",
+										"resend-verification-code"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Nov 2025 10:54:14 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01KBA6C8NFSX98Q5KR8PH0Z8MB"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"تم إرسال رمز التحقق بنجاح. لديك 1 محاولات متبقية اليوم.\",\n    \"data\": {\n        \"remaining_attempts\": 1,\n        \"verification_code\": 90815\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonResponse = pm.response.json();\r",
+									"pm.collectionVariables.set('token', jsonResponse.data.access_token);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "01019206606",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "user_type",
+									"value": "bodyguard",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url_online}}/auth/login",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "01021783851",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}/auth/login",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Nov 2025 11:00:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01KBA6PZHAZBWGXJ42RET0SECJ"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"تم تسجيل الدخول بنجاح\",\n    \"data\": {\n        \"user\": {\n            \"user_id\": 15,\n            \"user_name\": \"mido\",\n            \"user_email\": \"mido@gmail.com\",\n            \"user_phone\": \"01021783851\",\n            \"user_lang\": \"ar\",\n            \"user_status\": \"active\",\n            \"user_active\": true,\n            \"user_img\": \"http://127.0.0.1:8080/uploads/avatar.png\",\n            \"user_type\": \"user\",\n            \"user_role_id\": 2,\n            \"phone_verified\": true,\n            \"phone_verified_at\": \"2025-11-30T10:54:25.000000Z\"\n        },\n        \"token\": \"{{vault:json-web-token}}kIznxJXLL5OtsJhjbqsvUnkLdXDvy43wRmy4jhXkGETTFu56foUzpX9b_pQLmkvBt9Usy-GppcJjkCABtR3dF6Sz9uO_yV_p6wbl9xKaF1I7Wg9fmJ9zwGL5ycy184Jz8BKJJchvxjwkKiM9T1LedDNJuJSSBmAsSizeWOvxF9vn3dViUQa91QZR3wSMkZbrGZCp9ccqnE\",\n        \"token_type\": \"Bearer\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "forget-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "01019206607",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url_online}}/auth/forget-password",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"auth",
+								"forget-password"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "01021783851",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}/auth/forget-password",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"auth",
+										"forget-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Nov 2025 11:05:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01KBA71JH5HP980JZ1NF3CXZNM"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"تم إرسال رمز التحقق بنجاح. لديك 2 محاولات متبقية اليوم.\",\n    \"data\": {\n        \"remaining_attempts\": 2\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "verify-forget-password-code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "01019206606",
+									"type": "text"
+								},
+								{
+									"key": "verification_code",
+									"value": "73541",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url_online}}/auth/verify-forget-password-code",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"auth",
+								"verify-forget-password-code"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "01021783851",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}/auth/verify-forget-password-code?phone=01021783851&verification_code=89046",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"auth",
+										"verify-forget-password-code"
+									],
+									"query": [
+										{
+											"key": "phone",
+											"value": "01021783851"
+										},
+										{
+											"key": "verification_code",
+											"value": "89046"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Nov 2025 11:08:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01KBA75HTMZ2PD1W7K92PANQ0F"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"ms_lang.Verification code verified successfully\",\n    \"data\": {\n        \"phone\": \"01021783851\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "reset-password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "01019206607",
+									"type": "text"
+								},
+								{
+									"key": "verification_code",
+									"value": "16778",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url_online}}/auth/reset-password",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"auth",
+								"reset-password"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "01021783851",
+											"type": "text"
+										},
+										{
+											"key": "verification_code",
+											"value": "89046",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}/auth/reset-password",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"auth",
+										"reset-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Nov 2025 11:15:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01KBA7M2VN4D7T9AB3A8D1ETEM"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"تم تحديث كلمة المرور بنجاح\",\n    \"data\": {\n        \"user\": {\n            \"user_id\": 15,\n            \"user_name\": \"mido\",\n            \"user_email\": \"mido@gmail.com\",\n            \"user_phone\": \"01021783851\",\n            \"user_lang\": \"ar\",\n            \"user_status\": \"active\",\n            \"user_active\": true,\n            \"user_img\": \"http://127.0.0.1:8080/uploads/avatar.png\",\n            \"user_type\": \"user\",\n            \"user_role_id\": 2,\n            \"phone_verified\": true,\n            \"phone_verified_at\": \"2025-11-30T10:54:25.000000Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url_online}}/auth/profile",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"auth",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "karim",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "karim@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url_online}}/auth/update-profile",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"auth",
+								"update-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "about_us",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url_online}}/about_us",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"about_us"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "terms_conditions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url_online}}/terms_conditions",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"terms_conditions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "home",
+			"item": [
+				{
+					"name": "sliders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url_online}}/sliders",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"sliders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "services",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url_online}}/services",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bookings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "service_id",
+									"value": " 1",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": " 24.7136",
+									"type": "text"
+								},
+								{
+									"key": "long",
+									"value": " 46.6753",
+									"type": "text"
+								},
+								{
+									"key": "area_name",
+									"value": " حي العليا",
+									"type": "text"
+								},
+								{
+									"key": "building_name",
+									"value": " المبنى التجاري",
+									"type": "text"
+								},
+								{
+									"key": "floor",
+									"value": " الطابق الأول",
+									"type": "text"
+								},
+								{
+									"key": "address_details",
+									"value": " المكتب الرئيسي",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": " الرياض",
+									"type": "text"
+								},
+								{
+									"key": "region",
+									"value": " المنطقة الوسطى",
+									"type": "text"
+								},
+								{
+									"key": "street",
+									"value": " طريق الملك فهد",
+									"type": "text"
+								},
+								{
+									"key": "start_datetime",
+									"value": " 2025-12-16 12:00:00",
+									"type": "text"
+								},
+								{
+									"key": "duration_hours",
+									"value": " 3",
+									"type": "text"
+								},
+								{
+									"key": "guards_count",
+									"value": " 1",
+									"type": "text"
+								},
+								{
+									"key": "dress_type",
+									"value": " casual",
+									"type": "text"
+								},
+								{
+									"key": "language",
+									"value": " ar",
+									"type": "text"
+								},
+								{
+									"key": "has_coordinator",
+									"value": " 0",
+									"type": "text"
+								},
+								{
+									"key": "additional_notes",
+									"value": " حارس شخصي لمدة 3 ساعات",
+									"type": "text"
+								},
+								{
+									"key": "payment_method",
+									"value": " visa",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url_online}}/bookings",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "service_id",
+											"value": " 2",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": " 21.4858",
+											"type": "text"
+										},
+										{
+											"key": "long",
+											"value": " 39.1925",
+											"type": "text"
+										},
+										{
+											"key": "area_name",
+											"value": " حي الزهراء",
+											"type": "text"
+										},
+										{
+											"key": "building_name",
+											"value": " قاعة الأفراح الكبرى",
+											"type": "text"
+										},
+										{
+											"key": "floor",
+											"value": " الطابق الأرضي",
+											"type": "text"
+										},
+										{
+											"key": "address_details",
+											"value": " قاعة الأفراح الرئيسية، المدخل الشمالي",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": " جدة",
+											"type": "text"
+										},
+										{
+											"key": "region",
+											"value": " منطقة مكة المكرمة",
+											"type": "text"
+										},
+										{
+											"key": "street",
+											"value": " طريق الملك عبدالعزيز",
+											"type": "text"
+										},
+										{
+											"key": "start_datetime",
+											"value": " 2025-12-20 18:00:00",
+											"type": "text"
+										},
+										{
+											"key": "duration_hours",
+											"value": " 8",
+											"type": "text"
+										},
+										{
+											"key": "guards_count",
+											"value": " 5",
+											"type": "text"
+										},
+										{
+											"key": "dress_type",
+											"value": " full_suit",
+											"type": "text"
+										},
+										{
+											"key": "language",
+											"value": " both",
+											"type": "text"
+										},
+										{
+											"key": "has_coordinator",
+											"value": " 1",
+											"type": "text"
+										},
+										{
+											"key": "additional_notes",
+											"value": " حفل زفاف كبير، نحتاج حراس متخصصين في حماية المناسبات",
+											"type": "text"
+										},
+										{
+											"key": "payment_method",
+											"value": " mada",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}/bookings",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"bookings"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8080"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Nov 2025 14:32:37 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "01KBAJW43P4XN2XN05BQ690ECC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"تم إنشاء الحجز بنجاح\",\n    \"data\": {\n        \"id\": 2,\n        \"service\": {\n            \"id\": 2,\n            \"title\": \"مناسبات\"\n        },\n        \"location\": {\n            \"lat\": 21.4858,\n            \"long\": 39.1925,\n            \"area_name\": \"حي الزهراء\",\n            \"building_name\": \"قاعة الأفراح الكبرى\",\n            \"floor\": \"الطابق الأرضي\",\n            \"address_details\": \"قاعة الأفراح الرئيسية، المدخل الشمالي\",\n            \"city\": \"جدة\",\n            \"region\": \"منطقة مكة المكرمة\",\n            \"street\": \"طريق الملك عبدالعزيز\"\n        },\n        \"start_datetime\": \"2025-12-20 18:00:00\",\n        \"duration_hours\": 8,\n        \"guards_count\": 5,\n        \"dress_type\": \"full_suit\",\n        \"language\": \"both\",\n        \"has_coordinator\": true,\n        \"additional_notes\": \"حفل زفاف كبير، نحتاج حراس متخصصين في حماية المناسبات\",\n        \"payment_method\": \"mada\",\n        \"total_price\": 40000,\n        \"status\": \"pending\",\n        \"payment_status\": \"pending\",\n        \"payment_transaction_id\": null,\n        \"created_at\": \"2025-11-30 14:32:37\",\n        \"updated_at\": \"2025-11-30 14:32:37\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "bookings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url_online}}/bookings",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show_booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url_online}}/bookings/11",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"bookings",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rate-guard",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{user_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"guard_id\": 25\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_online}}/bookings/12/rate-guard",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"bookings",
+								"12",
+								"rate-guard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rating-criteria",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url_online}}/rating-criteria",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"rating-criteria"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bodyguard",
+			"item": [
+				{
+					"name": "bookings",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "01021783851",
+									"type": "text"
+								},
+								{
+									"key": "verification_code",
+									"value": "68432",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/guard/bookings",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"guard",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show_booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/guard/bookings/1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"guard",
+								"bookings",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "acccept_booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url_online}}/guard/bookings/23/accept",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"guard",
+								"bookings",
+								"23",
+								"accept"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "guard_status",
+									"value": "completed",
+									"description": "on_the_way,arrived,completed",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url_online}}/guard/bookings/12/update-status",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"guard",
+								"bookings",
+								"12",
+								"update-status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_booking_status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_online}}/guard/bookings/12/status",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"guard",
+								"bookings",
+								"12",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggle-accept-bookings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accept_bookings\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_online}}/auth/toggle-accept-bookings",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"auth",
+								"toggle-accept-bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my-bookings",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "01021783851",
+									"type": "text"
+								},
+								{
+									"key": "verification_code",
+									"value": "68432",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url_online}}/guard/my-bookings",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"guard",
+								"my-bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my-ratings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url_online}}/guard/my-ratings",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"guard",
+								"my-ratings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "chat",
+			"item": [
+				{
+					"name": "chat_rooms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_chat",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "booking_id",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "23",
+									"type": "text"
+								},
+								{
+									"key": "guard_id",
+									"value": "25",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url_online}}/chat/rooms/start",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"chat",
+								"rooms",
+								"start"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send_message",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "booking_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "sender_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "تعبااااااااااااااااااااااااااااااااااااااااان والللله",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url_online}}/chat/rooms/5/messages",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"chat",
+								"rooms",
+								"5",
+								"messages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "chat_messages",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_online}}/chat/rooms/5/messages",
+							"host": [
+								"{{url_online}}"
+							],
+							"path": [
+								"chat",
+								"rooms",
+								"5",
+								"messages"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": ""
+		},
+		{
+			"key": "token",
+			"value": ""
+		},
+		{
+			"key": "online",
+			"value": "",
+			"type": "default"
+		}
+	]
+}

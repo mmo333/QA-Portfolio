@@ -1,0 +1,5 @@
+    "name": "mohamed",
+    "email": "mm00@gmail.com",
+    "phone": "550102911",
+    "password": "12345678",
+    "role_id":7
