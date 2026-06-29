@@ -40,3 +40,13 @@ Validation error
 
 **Actual:**
 Request accepted
+
+---
+
+## 📊 QA Standards
+
+All bugs follow industry-standard structure:
+- Clear reproduction steps
+- Severity classification
+- Expected vs Actual results
+- Business impact awareness
