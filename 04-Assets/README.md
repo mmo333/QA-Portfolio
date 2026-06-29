@@ -1,27 +1,27 @@
-# 📁 QA Testing Assets
+# QA Assets - Evidence
 
 ## 📌 Overview
-This section contains real testing evidence from ERP and API testing activities.
+This folder contains real QA testing evidence from ERP and API testing.
 
 ---
 
-## 📋 Test Cases Evidence
-
-- Manual Test Cases for ERP workflows
-- Covers: Purchase Orders, Inventory, Suppliers, Transfers
-- File: Test-Cases.xlsx
+## 📋 Test Cases
+- Manual test cases for ERP workflows
+- Stored in Excel format
 
 ---
 
-## 🧠 What This Demonstrates
-
-- Ability to design structured test cases
-- Understanding of real ERP business flows
-- Coverage of positive & negative scenarios
-- Practical QA execution skills
+## 🔌 API Testing Evidence
+- Postman request/response screenshots
+- Status code validation proof
 
 ---
 
-## 🎯 Value
+## 🐞 Bug Evidence
+- Screenshots of identified defects
+- System behavior validation
 
-These assets prove real hands-on QA experience in enterprise systems.
+---
+
+## 🎯 Purpose
+This section demonstrates real hands-on QA execution and validation activities.
