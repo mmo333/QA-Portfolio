@@ -55,3 +55,47 @@ Purchase Order should be created successfully and appear in list view.
 ## 📌 Impact
 
 Ensured business workflow accuracy across ERP modules and validated critical financial and inventory operations.
+
+## 🏢 Real Project: Microsoft & Sprints Testing Cycle
+
+### 📌 Overview
+This project was based on real business requirements provided by Microsoft & Sprints simulation.
+
+It included full QA lifecycle from requirements analysis to defect reporting and tracking using Jira.
+
+---
+
+### 🧩 Activities Performed
+
+- Requirement analysis and understanding feature scope
+- Writing detailed test cases based on requirements
+- Functional testing of specific features
+- Logging defects in structured format
+- Performing regression testing after fixes
+- Tracking issues using Jira workflow
+
+---
+
+### 🐞 Bug Reporting
+
+Defects were identified and documented with:
+- Clear reproduction steps
+- Expected vs actual results
+- Priority & severity classification
+
+---
+
+### 🔁 Jira Workflow Simulation
+
+- Created tasks in Jira
+- Moved tickets across workflow:
+  Open → In Progress → Retest → Done
+
+---
+
+### 🎯 Outcome
+
+This project demonstrates real-world QA experience in:
+- Requirement-based testing
+- Agile workflow environment
+- Defect lifecycle management
