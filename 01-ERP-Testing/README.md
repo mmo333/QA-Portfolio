@@ -49,3 +49,9 @@ Purchase Order should be created successfully and appear in list view.
 - Validating ERP business workflows
 - Testing financial & inventory logic
 - Ensuring data consistency across modules
+
+---
+
+## 📌 Impact
+
+Ensured business workflow accuracy across ERP modules and validated critical financial and inventory operations.
