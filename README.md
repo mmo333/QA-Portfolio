@@ -31,6 +31,19 @@ Currently working on Odoo-based ERP systems including CRM, Inventory, Orders, an
 
 ---
 
+## 🏢 Real Experience Highlight
+
+Worked with enterprise ERP systems including:
+- Inventory Management
+- CRM
+- Purchase & Sales workflows
+- Affiliate & Commission systems
+
+Experienced in full defect lifecycle:
+Open → In Progress → Retest → Closed
+
+---
+
 ## 📫 Contact
 
 📧 Email: mo3595661@gmail.com  
