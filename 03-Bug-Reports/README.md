@@ -1,52 +1,86 @@
 # Bug Reports
 
 ## 📌 Overview
-Sample QA bug reports written in real defect format.
+This section contains real-style QA defect reports based on ERP and SaaS testing scenarios.
 
 ---
 
-## 🐞 BUG-001
+## 🧩 Real Testing Context
+Bugs were identified during:
+- ERP system testing (Inventory, Purchase, CRM)
+- API testing (Postman)
+- Feature validation based on requirements
 
-**Title:** Purchase Order can be created without supplier
+---
 
-**Severity:** High
+## 🐞 Sample Bug Reports
 
-**Steps:**
-1. Open Purchase Orders
+🐞 BUG-001
+**Title:** System allows creating Purchase Order without selecting Supplier
+
+**Feature:** Purchase Orders  
+**Severity:** High  
+**Priority:** High  
+
+**Steps to Reproduce:**
+1. Open Purchase Orders module
 2. Click Create
-3. Leave Supplier empty
-4. Save
+3. Do not select Supplier
+4. Add products
+5. Click Save
 
-**Expected:**
-System should block saving
+**Expected Result:**
+System should display validation error and prevent saving
 
-**Actual:**
-System allows creation
+**Actual Result:**
+Purchase Order is created successfully without Supplier
 
----
+🐞 BUG-002
+**Title:** API accepts invalid OTP format during verification
 
-## 🐞 BUG-002
-
-**Title:** Invalid OTP accepted
-
-**Severity:** Medium
+**Feature:** Authentication API  
+**Severity:** Medium  
+**Priority:** Medium  
 
 **Steps:**
-1. Send random OTP format
-2. Submit request
+1. Send OTP verification request via Postman
+2. Enter invalid format (string instead of numeric OTP)
 
-**Expected:**
-Validation error
+**Expected Result:**
+System should return validation error (400 Bad Request)
 
-**Actual:**
-Request accepted
+**Actual Result:**
+Request is accepted and processed
+
+🐞 BUG-003
+**Title:** Inventory quantity not updated after transfer approval
+
+**Feature:** Inventory Management  
+**Severity:** High  
+**Priority:** High  
+
+**Steps:**
+1. Create transfer request
+2. Approve transfer
+3. Check inventory quantity
+
+**Expected Result:**
+Inventory should update correctly after approval
+
+**Actual Result:**
+Quantity remains unchanged or incorrect
 
 ---
 
-## 📊 QA Standards
+## 📊 QA Standards Used
 
-All bugs follow industry-standard structure:
+All bug reports follow standard QA format:
 - Clear reproduction steps
-- Severity classification
+- Severity & Priority classification
 - Expected vs Actual results
 - Business impact awareness
+
+---
+
+## 🎯 Outcome
+Demonstrates ability to identify, document, and communicate defects in real ERP and API systems.
