@@ -1,8 +1,6 @@
-# Assets
+## 📎 Purpose
 
-This folder contains supporting materials:
-
-- Postman screenshots
-- Test case documents
-- Evidence from testing
-- API responses samples
+This section provides visual proof of testing activities including:
+- API execution results
+- Test case documentation
+- System behavior evidence
