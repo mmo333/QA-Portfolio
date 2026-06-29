@@ -1,38 +1,32 @@
 # API Testing - Postman
 
 ## 📌 Overview
-This section demonstrates API testing using Postman for real-world backend systems.
+This section demonstrates API testing using Postman on real backend services.
 
 ---
 
-## 🔌 Covered APIs
+## 🔌 APIs Covered
 
-### Authentication
+### Authentication APIs
 - Login
 - Register
-- Logout
 - OTP Verification
 
-### Provider Management
-- Add Location
-- Update Location
-- Get Countries / Cities
-
-### Services
-- Create Service
-- Update Service
-- Delete Service
-- Accept / Reject Requests
+### Core APIs
+- Services Management
+- Provider Management
+- Location APIs
 
 ---
 
-## 🧪 Testing Types
+## 🧪 Testing Activities
 
-- Status Code Validation
+- Status Code Validation (200, 400, 401)
 - Response Body Validation
-- Negative Testing
 - Authorization Testing
+- Negative Testing
 - Input Validation
+- Token Verification
 
 ---
 
@@ -41,8 +35,14 @@ Postman
 
 ---
 
-## 🎯 Key Skills
+## 📸 Evidence
 
-- API functional validation
-- Request/Response debugging
-- JSON structure validation
+This section includes:
+- Postman request screenshots
+- API response validation
+- Collection structure
+
+---
+
+## 🎯 Goal
+Validate backend functionality, response correctness, and error handling in real-world API systems.
