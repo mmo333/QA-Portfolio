@@ -44,6 +44,13 @@ Open → In Progress → Retest → Closed
 
 ---
 
+## 🏆 Highlight Project
+
+Microsoft & Sprints QA Simulation Project:
+End-to-end testing cycle including requirements analysis, test case design, defect reporting, and Jira workflow management.
+
+---
+
 ## 📫 Contact
 
 📧 Email: mo3595661@gmail.com  
